@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url(login-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 1560px 1500px;
+    
+}
+.container{
+    color: yellow;
+    text-align: center;
+}
+.form-control{
+    border-radius:6px;
+    margin-top: 20px;
+    padding:8px 8px;
+}
+.second{
+    
+    border-radius:8px;
+    margin-top:100px;
+    padding:20px;
+    
+}
+.submit-btn{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    background-color:#5890FF;
+    color:white;
+    font-family:sans-serif;
+    font-size:25px;
+    font-weight:600;
+}
+.forgot-pwd{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-top:20px;
+    color:#f6ff00;
+    text-decoration: none;
+}
+.forgot-p{
+    text-align:center;
+    margin-top:20px;
+}
+.create-btn{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:20px;
+    background: #25D366;
+    color:white;
+    font-size:20px;
+    font-family:sans-serif;
+    font-weight:800px;
+    text-decoration: none;
+}
+.err-msg{
+    color:red;
+    text-align:center;
+    padding-top:10px;
+    font-size:17px;
+    font-weight:600;
+}
+
+@media only screen and (max-width: 600px){
+    .second{
+        margin-left:5px;
+        margin-right:5px;
+        margin-top:30px;
+    }
+}

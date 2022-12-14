@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="../static/home.css">
+
+</head>
+<body>
+ 
+
+  <nav class="navbar navbar-expand-lg ">
+
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="../static/images/logo.JPG" alt="logo" class="logo"></a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a href={{url_for('device')}} class="nav-link">Device</a>
+      </li>
+        <li class="nav-item">
+            <a href={{url_for('custom')}} class="nav-link ">Custom Pc</a>
+        </li>
+        <li class="nav-item">
+            <a href={{url_for('components')}} class="nav-link ">Components</a>
+        </li>
+        <li class="nav-item">
+            <a href={{url_for('track')}} class="nav-link ">Track order</a>
+        </li>
+        <li class="nav-item">
+            <a href={{url_for('contact')}} class="nav-link ">Contactus</a>
+        </li>
+        </ul>
+        
+      <a href={{url_for('checkout')}}> <i class="fa fa-shopping-cart fa-2x"></i>
+        <li class="nav-item">
+          <a href="#" class="nav-link "></a>
+      </li>
+      <a href={{url_for('profilepage')}}> <i class="fa fa-user fa-2x"></i>
+        <li class="nav-item">
+          <a href="../templates/profilepage.html" class="nav-link "></a>
+    </div>
+    </div>
+  </nav>
+
+<br>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="../static/images/home-6.jpg" style="width:100%">
+       </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="../static/images/home-7.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="../static/images/home-8.jpg" style="width:100%">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+    
+    <a href="{{url_for('device')}}">
+      <center><img src="../static/images/home-1.jpg"  width="500" height="333"><br></a>
+              <a href="{{url_for('custom')}}">
+              <br>
+              <img src="../static/images/home-2.jpg"  width="500" height="333">
+      </center>
+    </a>
+  
+    <div class="gallery">
+      <img src="../static/images/truck.png" alt="Cinque Terre">
+    </a>
+    <div class="desc">Free Home  Delivery</div>
+  </div>
+  
+  <div class="gallery">
+      <img src="../static/images/product-return.png" alt="Forest">
+    </a>
+    <div class="desc">Instant Return Policy</div>
+  </div>
+  
+  <div class="gallery">
+      <img src="../static/images/customer-service.png" alt="Northern Lights">
+    </a>
+    <div class="desc">Best Technical Support</div>
+  </div>
+  <div class="gallery">
+    <img src="../static/images/money.png" alt="Northern Lights">
+  </a>
+  <div class="desc">Secure Payment Way</div>
+</div>
+  
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <img src="../static/images/logo.JPG" alt="logo" style="height:90px;" class="footer-logo mx-auto"><br>
+      <div class="social-btns mt-5">
+        <a href="https://www.facebook.com/">
+          <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://web.whatsapp.com/">
+          <i class="fa fa-2x fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Become a member
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('signup')}}">Register</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('login')}}">Log In</a>
+        </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Support
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('custom')}}">Custom pc</a>
+        </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('device')}}">Devices</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('components')}}">Components</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('track')}}">Track order</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('contact')}}">Contact</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+     
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

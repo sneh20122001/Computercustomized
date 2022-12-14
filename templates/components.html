@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="components">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../static/js/script.js" defer></script>
+ 
+</head>
+<body>
+         
+  <nav class="navbar navbar-expand-lg ">
+
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="../static/images/logo.JPG" alt="logo" class="logo"></a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a href="{{url_for('device')}}" class="nav-link">Device</a>
+      </li>
+        <li class="nav-item">
+            <a href="{{url_for('custom')}}" class="nav-link ">Custom Pc</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('components')}}" class="nav-link ">Components</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('track')}}" class="nav-link ">Track order</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('contact')}}" class="nav-link ">Contactus</a>
+        </li>
+        </ul>
+        
+      <a href="{{url_for('checkout')}}"> <i class="fa fa-shopping-cart fa-2x"></i>
+        <li class="nav-item">
+          <a  class="nav-link "></a>
+      </li>
+      <a href="{{url_for('profilepage')}}"> <i class="fa fa-user fa-2x"></i>
+        <li class="nav-item">
+          <a class="nav-link "></a>
+    </div>
+    </div>
+  </nav>
+
+  <br>
+  <div class="container">
+
+    <h3 class="title">Components</h3>
+ 
+    <div class="products-container">
+ 
+       <div class="product" data-name="p-1">
+          <img src="../static/images/7.png" alt="">
+          <h3>Zebronics Zeb-Transformer-M</h3>
+          <div class="price">₹500.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-2">
+          <img src="../static/images/8.png" alt="">
+          <h3>Graphics Cards Card RX 580</h3>
+          <div class="price">₹20,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-3">
+          <img src="../static/images/9.png" alt="">
+          <h3>TP-Link USB Bluetooth Adapter</h3>
+          <div class="price">₹800.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-4">
+          <img src="../static/images/10.png" alt="">
+          <h3>CPU Cooler Compatible with LGA1700</h3>
+          <div class="price">₹3000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-5">
+          <img src="../static/images/11.png" alt="">
+          <h3>CPU Cooler Compatible with LGA1700</h3>
+          <div class="price">₹3000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-6">
+          <img src="../static/images/12.png" alt="">
+          <h3>Ant Esports Graffiti Mid- Tower Computer Case</h3>
+          <div class="price">₹5000.00</div>
+       </div>
+ 
+    </div>
+ 
+ </div>
+ 
+ <div class="products-preview">
+ 
+    <div class="preview" data-target="p-1">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/7.png" alt="">
+       <h3>Zebronics Zeb-Transformer-M</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Zebronics Zeb-Transformer-M Optical USB Gaming Mouse with LED Effect(Black)</p>
+       <div class="price">₹500.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="Zebronics Zeb TransformerM-500">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-2">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/8.png" alt="">
+       <h3>Graphics Cards Card RX 580</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Video Card RX 580 8GB 256Bit 2048SP GDDR5 Graphics Cards for AMD Radeon RX 580 Series Professional for ETH Mining and Gaming</p>
+       <div class="price">₹20,000.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="Graphics Cards Card RX 580-20000">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div> 
+    </div>
+ 
+    <div class="preview" data-target="p-3">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/9.png" alt="">
+       <h3>TP-Link USB Bluetooth Adapter</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>PC 4.0 Bluetooth Dongle Receiver Support Windows 11/10/8.1/8/7 for Desktop, Laptop, Mouse, Keyboard, Printers, Headsets, Speakers, PS4/ Xbox Controllers (UB400)</p>
+       <div class="price">₹800.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="TP Link USB Bluetooth Adapter-800">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-4">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/10.png" alt="">
+       <h3>Cosmic Byte GS430 Gaming wired over ear Headphone</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>7 Color RGB LED and Microphone for PC, PS5, Xbox, Mobiles, Tablets, Laptops (with mic,Black)</p>
+       <div class="price">₹900.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="Cosmic Byte GS430 Gaming wired over ear Headphone-900">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+        </div>
+    </div>
+ 
+    <div class="preview" data-target="p-5">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/11.png" alt="">
+       <h3>CPU Cooler Compatible with LGA1700</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>SilverStone Technology AR12-TUF Advanced Copper Heat-Pipe Direct Contact (HDC) Technology CPU Cooler Compatible with LGA1700, SST-AR12-TUF</p>
+       <div class="price">₹3000.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="CPU Cooler Compatible with LGA1700-3000">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-6">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/12.png" alt="">
+       <h3>Ant Esports Graffiti Mid- Tower Computer Case</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Gaming Cabinet - Black | Supports ATX, Micro-ATX, Mini-ITX | Pre-Installed 1 x 120mm Rear Fan</p>
+       <div class="price">₹5000.00</div>
+       <div class="buttons">
+        <form action="{{url_for('components')}}" method="POST">
+          <input type="hidden" name="product" value="Ant Esports Graffiti Mid Tower Computer Case-5000">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div>
+    </div>
+ 
+ </div>
+</section>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <img src="../static/images/logo.JPG" alt="logo" style="height:90px;" class="footer-logo mx-auto"><br>
+      <div class="social-btns mt-5">
+        <a href="https://www.facebook.com/">
+          <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://web.whatsapp.com/">
+          <i class="fa fa-2x fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <h6>
+          Become a member
+        </h6>
+        <ul class="footer-ul">
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('signup')}}">Register</a>
+          </li>
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('login')}}">Log In</a>
+          </li>
+          </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <h6>
+          Support
+        </h6>
+        <ul class="footer-ul">
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('custom')}}">Custom pc</a>
+          </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('device')}}">Devices</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('components')}}">Components</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('track')}}">Track order</a>
+        </li> 
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('contact')}}">Contact</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+   
+  </section>
+
+ 
+  <script>
+    function validate(){
+      
+      var email2 = document.getElementById("email2").value;
+      var name = document.getElementById("name");
+      var emailregex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+)([a-z]{2,8})(.[a-zA-Z]{2,8})?$/;
+      
+      if (emailregex.test(email2) == false){
+        document.getElementById("email2").style.border = "2px solid red";
+        document.getElementById("ep2").style.display = "block";
+        return false;
+      } if(name.value.trim() == ""){
+        name.style.border = "2px solid red";
+        document.getElementById("np1").style.display = "block";
+        return false;
+      }
+    }
+    function validate2(){
+      var email = document.getElementById("email").value;
+      var emailregex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+)([a-z]{2,8})(.[a-zA-Z]{2,8})?$/;
+      if(emailregex.test(email) == false){
+          document.getElementById("email").style.border = "2px solid red";
+          document.getElementById("ep").style.display = "block";
+          return false;
+        }
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="contact">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/contact.css">
+    <script src="https://kit.fontawesome.com/2884891581.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg ">
+
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="../static/images/logo.JPG" alt="logo" class="logo"></a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a href="{{url_for('device')}}" class="nav-link">Device</a>
+      </li>
+        <li class="nav-item">
+            <a href="{{url_for('custom')}}" class="nav-link ">Custom Pc</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('components')}}" class="nav-link ">Components</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('track')}}" class="nav-link ">Track order</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('contact')}}" class="nav-link ">Contactus</a>
+        </li>
+        </ul>
+        
+      <a href="{{url_for('checkout')}}"> <i class="fa fa-shopping-cart fa-2x"></i>
+        <li class="nav-item">
+          <a  class="nav-link "></a>
+      </li>
+      <a href="{{url_for('profilepage')}}"> <i class="fa fa-user fa-2x"></i>
+        <li class="nav-item">
+          <a class="nav-link "></a>
+    </div>
+    </div>
+  </nav>
+
+  <h1 class="main-header" style="text-align:center;">
+    Contact Us
+</h1>
+  <div class="container contact-container">
+      
+      <div class="row">
+          <div class="col-md-4 col-sm-12 col-lg-4">
+              <h4 class="contact-header">
+                  Contact Details
+                  <hr class="mx-auto" style="text-align:center;width:50%;background-color: #ffd900;">
+              </h4>
+              <div class="contact-content1">
+                <i class="fa fa-2x fa-envelope" class="conatct-icon" aria-hidden="true" style="color:#ffffff;"></i>
+                <span>computerclinic@gmail.com</span>
+              </div>
+              <div class="contact-content2">
+                <i class="fa fa-2x fa-phone-square" class="conatct-icon" aria-hidden="true" style="color:#ffffff;"></i>
+                <span>+91 8264618888</span>
+              </div>
+          </div>
+          <div class="col-md-8 col-sm-12 col-lg-8">
+            <h4 class="contact-header">
+                Let's talk! <i class="fa fa-smile-o" aria-hidden="true"></i>
+                <hr class="mx-auto" style="text-align:center;width:50%;background-color: #ffd900;"></h4>
+
+                <form onsubmit="return validate()" action="/contact" method="POST" style="margin-top:30px;padding-right:50px;padding-left:30px;">
+                    <input class="form-control mt-3" type="text" id="name" name="name" placeholder="Your Name" required>
+                    <p id="np1" style="color:red;display:none;">Invalid Email</p>
+                    <input class="form-control mt-3" type="email" id="email2" name="email" placeholder="Your Email" required>
+                    <p id="ep2" style="color:red;display:none;">Invalid Email</p>
+                    <textarea class="form-control mt-3" name="message" placeholder="Type a message"required></textarea>
+                    <input type="submit" class="btn btn-lg mt-3" value="Submit" style="background-color:#0000e6;color:white;padding:4px 10px;margin-bottom:30px;">
+                </form>
+
+            </h4>
+        </div>
+      </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <img src="../static/images/logo.JPG" alt="logo" style="height:90px;" class="footer-logo mx-auto"><br>
+        <div class="social-btns mt-5">
+          <a href="https://www.facebook.com/">
+            <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/">
+            <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://web.whatsapp.com/">
+            <i class="fa fa-2x fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <h6>
+          Become a member
+        </h6>
+        <ul class="footer-ul">
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('signup')}}">Register</a>
+          </li>
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('login')}}">Log In</a>
+          </li>
+          </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <h6>
+          Support
+        </h6>
+        <ul class="footer-ul">
+          <li class="footer-links">
+            <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('custom')}}">Custom pc</a>
+          </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('device')}}">Devices</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('components')}}">Components</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('track')}}">Track order</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('contact')}}">Contact</a>
+        </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <h5>
+          Stay updated with us!
+        </h5>
+        <form onsubmit="return validate2()" method="POST">
+          <input type="email" id="email" placeholder="Enter your email address" class="form-control" required name="email">
+          <p id="ep" style="color:red;display:none;">Invalid Email</p>
+          <input type="submit" class="btn btn-lg mt-3" value="Submit" style="background-color:#e60000;color:white;padding:4px 10px;">
+        </form>
+      </div>
+    </div>
+    </body>
+</html>

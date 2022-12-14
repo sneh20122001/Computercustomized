@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family:sans-serif;
+	width: 100%;
+	height:100%;
+  background: linear-gradient(115deg, #000000 0%, #00C508 55%, #000000 100%), 
+  linear-gradient(115deg, #0057FF 0%, #020077 100%), 
+  conic-gradient(from 110deg at -5% 35%, #000000 0deg, #FAFF00 360deg), 
+  conic-gradient(from 220deg at 30% 30%, #FF0000 0deg, #0000FF 220deg, #e64848 360deg), 
+  conic-gradient(from 235deg at 60% 35%, #0089D7 0deg, #3e3ede 180deg, #67fdee 360deg);
+  background-blend-mode: soft-light, soft-light, overlay, screen, normal;
+   
+  background-repeat: no-repeat;
+}
+
+/*nav bar*/
+
+.logo{
+  height:50px;   
+}
+
+.navbar {
+  background-color: black;
+  border-radius: 30px;
+  
+}
+.navbar li{
+  list-style: none; 
+  margin: 15px 20px;
+float: left;
+}
+.navbar ul{
+overflow: auto;
+}
+.navbar li a{
+padding: 3px 3px;
+text-decoration: none;
+color: rgb(255, 230, 0);
+
+}
+.nav-link{
+  font-size: 20px;
+  }
+
+.fa{
+  color: rgb(255, 230, 0);
+  
+}
+
+/*icon*/
+    div.gallery {
+      margin: 130px;
+      float: left;
+      width: 110px;
+      
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+      
+    }
+    
+    div.desc {
+      padding: 15px;
+      color: #00C508;
+    }
+
+
+
+ /* footer */
+#footer{
+    margin-top:300px;
+    position:absolute;
+    width:100%;
+}
+.col-md-3{
+    padding-top:20px;
+    padding-bottom:20px;
+    color:#ffffff;
+}
+.footer-ul{
+    margin-top:20px;
+}
+.footer-links{
+    list-style: none;
+}
+.footer-links a{
+    color:rgb(255, 255, 255);
+    margin-left:5px;
+}
+.social-btns a{
+    margin-right:10px;
+    color:#ffffff;
+}
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+
+  
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+

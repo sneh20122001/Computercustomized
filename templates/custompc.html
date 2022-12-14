@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="custompc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>custompc</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/custompc.css">
+    <script src="https://kit.fontawesome.com/2884891581.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg ">
+
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="../static/images/logo.JPG" alt="logo" class="logo"></a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a href="{{url_for('device')}}" class="nav-link">Device</a>
+      </li>
+        <li class="nav-item">
+            <a href="{{url_for('custom')}}" class="nav-link ">Custom Pc</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('components')}}" class="nav-link ">Components</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('track')}}" class="nav-link ">Track order</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('contact')}}" class="nav-link ">Contactus</a>
+        </li>
+        </ul>
+        
+      <a href="{{url_for('checkout')}}"> <i class="fa fa-shopping-cart fa-2x"></i>
+        <li class="nav-item">
+          <a  class="nav-link "></a>
+      </li>
+      <a href="{{url_for('profilepage')}}"> <i class="fa fa-user fa-2x"></i>
+        <li class="nav-item">
+          <a class="nav-link "></a>
+    </div>
+    </div>
+  </nav>
+
+
+    <section id="custom-ring">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                  <img src="../static/images/Antec NX 500.png" class="nx-img">
+              </div>
+              <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                  <h4 class="custom-h4">
+                      CUSTOM RING
+                  </h4>
+                  <hr>
+
+                  <form action="/custompc" method="POST"> 
+                  <div class="row">
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                              Usage
+                          </p>
+                          <select class="form-control-lg">
+                              <option>Please select</option>
+                              <option value="Gaming ring">Gaming Ring</option>
+                          
+                            </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                              Cabinets Model
+                          </p>
+                         
+                            <select class="form-control-lg" name="antec" required>
+                                <option>Please select</option>
+                                <option value="ANTEC NX 500+₹4000">ANTEC NX 500+₹4000</option>
+                                <option value="ANTEC NX 500+₹4000">ANTEC NX 200+₹3500</option>
+                            </select>
+                      </div>  
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Processor
+                          </p>
+                          <select class="form-control-lg" name="amd" required>
+                              <option>Please select</option>
+                              <option value="AMD RYZEN 3 3200G (UPTO-4GHZ, CORES-4, THREADS-4) +₹10190">AMD RYZEN 3 3200G (UPTO-4GHZ, CORES-4, THREADS-4) +₹10190</option>
+                              <option value="CORE I3 10100 (UPTO 4.3 GHZ, CORES-4 THREADS-8) +₹9950">CORE I3 10100 (UPTO 4.3 GHZ, CORES-4 THREADS-8) +₹9950</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Motherboard
+                          </p>
+                          <select class="form-control-lg" name="tuf" required>
+                              <option>Please select</option>
+                              <option value="TUF GAMING B560 PLUS WIFI +₹16350">TUF GAMING B560 PLUS WIFI +₹16350</option>
+                              <option value="Z490 AORUS PRO AX +₹25900">Z490 AORUS PRO AX +₹25900</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Graphic Card
+                          </p>
+                          <select class="form-control-lg" name="asus" required>
+                              <option>Please select</option>
+                              <option value="ASUS GT 710 2 GB DDR5 +₹4250">ASUS GT 710 2 GB DDR5 +₹4250</option>
+                              <option value=" GIGABYTE NVIDIA GTX 1050TI 4GB DDR5 +₹15900"> GIGABYTE NVIDIA GTX 1050TI 4GB DDR5 +₹15900</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Storage
+                          </p>
+                          <select class="form-control-lg" name="ssd" required>
+                              <option>Please select</option>
+                              <option value="SSD SAMSUNG 250GB 980 NVME +₹3990">SSD SAMSUNG 250GB 980 NVME +₹3990</option>
+                              <option value="HDD WD1TB WD BLUE 7200RPM +₹3390">HDD WD1TB WD BLUE 7200RPM +₹3390</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Ram
+                          </p>
+                          <select class="form-control-lg" name="g" required>
+                              <option>Please select</option>
+                              <option value="G.SKILL 8 GB DDR4 RIPJAWS V 3200 MHZ CL16 +₹2790">G.SKILL 8 GB DDR4 RIPJAWS V 3200 MHZ CL16 +₹2790</option>
+                              <option value="CORE I3 10100 (UPTO 4.3 GHZ, CORES-4 THREADS-8) +₹9950">CORE I3 10100 (UPTO 4.3 GHZ, CORES-4 THREADS-8) +₹9950</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Coolers
+                          </p>
+                          <select class="form-control-lg" name="air" required>
+                              <option>Please select</option>
+                              <option value="AIR COOLER-COOLERMASTER-HYPER 410 RGB +₹1895">AIR COOLER-COOLERMASTER-HYPER 410 RGB +₹1895</option>
+                              <option value="LIQUIDCOOLERS-ASUS-ROG STRIX LC II 360 ARGB CPU LIQUID COOLER +₹19890">LIQUIDCOOLERS-ASUS-ROG STRIX LC II 360 ARGB CPU LIQUID COOLER +₹19890</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Wifi
+                          </p>
+                          <select class="form-control-lg" name="tp-link" required>
+                              <option>Please select</option>
+                              <option value="NOT REQUIRED">NOT REQUIRED</option>
+                              <option value="TP-LINK TL-WN823N 300MBPS MINI WIRELESS N USB ADAPTER +₹895">TP-LINK TL-WN823N 300MBPS MINI WIRELESS N USB ADAPTER +₹895</option>
+                          </select>
+                      </div>
+                      <div class="col-md-6 col-12 col-sm-12 col-lg-6">
+                          <p class="row-p">
+                             Opertating System
+                          </p>
+                          <select class="form-control-lg" name="windows" required>
+                              <option>Please select</option>
+                              <option value="WINDOWS 10 HOME 64 BIT FPP (WITH USB PENDRIVE) +₹10450">WINDOWS 10 HOME 64 BIT FPP (WITH USB PENDRIVE) +₹10450</option>
+                              <option value="WINDOWS 11 PROFESSIONAL 64 BIT FPP (WITH USB PENDRIVE) +₹14990">WINDOWS 11 PROFESSIONAL 64 BIT FPP (WITH USB PENDRIVE) +₹14990</option>
+                               <option value="WINDOWS 11 PROFESSIONAL 64 BIT FPP (WITH USB PENDRIVE) +₹14990">WINDOWS 11 PROFESSIONAL 64 BIT FPP (WITH USB PENDRIVE) +₹14990</option>
+                          </select>
+                      </div>                            
+                      </div>
+                        <input type="submit" class="btn btn-lg mt-3" value="Order" style="background-color:black;color:yellow;padding:4px 10px;">
+                    </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <div class="container">  
+    <div class="row">
+       <div class="col-md-3 col-lg-3 col-sm-12">
+         <img src="../static/images/logo.JPG" alt="logo" style="height:90px;" class="footer-logo mx-auto"><br>
+         <div class="social-btns mt-5">
+           <a href="https://www.facebook.com/"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+           <a href="https://www.instagram.com/">
+             <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+           </a>
+           <a href="https://www.whatsapp.com/">
+             <i class="fa fa-2x fa-whatsapp" aria-hidden="true"></i>
+           </a>
+         </div>
+       </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Become a member
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('signup')}}">Register</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('login')}}">Log In</a>
+        </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Support
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('custom')}}">Custom pc</a>
+        </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('device')}}">Devices</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('components')}}">Components</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('track')}}">Track order</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('contact')}}">Contact</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+         
+    
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        </body>
+    </html>

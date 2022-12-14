@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="Log In">
+    <title>Log In</title>
+    <meta itemprop="description" content="Log In">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/loginstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-sm-12"></div>
+            <div class="col-md-6 col-lg-4 col-sm-12 ">
+                <div class="second">
+                <h1>LOGIN</h1>
+                {%with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %} 
+            <p class="err-msg" style="color:red;">{{message}}</p>
+                    {% endfor %} 
+                {% endif %}
+            {% endwith %}
+                <form action="{{url_for('login')}}" method="POST" class="mx-auto" style="text-align: center;">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required>
+                    <input type="password" id="pwd" name="password" class="form-control" placeholder="Password" required>
+                    <input type="submit" value="Log In"  class="btn btn-block submit-btn mx-auto">
+                </form>
+                <p class="forgot-p">
+                    <a href="../templates/home.html"  class="forgot-pwd mx-auto" style="text-align:center;">Forgot password?</a>
+                </p>
+                
+                <hr>
+                <p>
+                    <a href="{{url_for('signup')}}" class="signup-btn" style="text-decoration: none;">
+                        <button class="btn btn-block create-btn mx-auto"> <strong>Create New Account</strong></button> 
+                    </a>
+                </p>
+                
+            </div>
+        </div>      
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

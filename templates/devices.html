@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="Devices">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>devices</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/devices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../static/js/script.js" defer></script>
+ 
+</head>
+<body>
+         
+  <nav class="navbar navbar-expand-lg ">
+
+    <a class="navbar-brand" href="{{url_for('home')}}"><img src="../static/images/logo.JPG" alt="logo" class="logo"></a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a href="{{url_for('device')}}" class="nav-link">Device</a>
+      </li>
+        <li class="nav-item">
+            <a href="{{url_for('custom')}}" class="nav-link ">Custom Pc</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('components')}}" class="nav-link ">Components</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('track')}}" class="nav-link ">Track order</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{url_for('contact')}}" class="nav-link ">Contactus</a>
+        </li>
+        </ul>
+        
+      <a href="{{url_for('checkout2')}}"> <i class="fa fa-shopping-cart fa-2x"></i>
+        <li class="nav-item">
+          <a  class="nav-link "></a>
+      </li>
+      <a href="{{url_for('profilepage')}}"> <i class="fa fa-user fa-2x"></i>
+        <li class="nav-item">
+          <a class="nav-link "></a>
+    </div>
+    </div>
+  </nav>
+
+  <br>
+  <div class="container">
+
+    <h3 class="title"> DEVICES </h3>
+ 
+    <div class="products-container">
+ 
+       <div class="product" data-name="p-1">
+          <img src="../static/images/1.png" alt="">
+          <h3>Lian Li Lancool II Mesh RGB (Black)</h3>
+          <div class="price">₹1,00,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-2">
+          <img src="../static/images/2.png" alt="">
+          <h3>Lian Li Lancool II Mesh RGB (White)</h3>
+          <div class="price">₹90,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-3">
+          <img src="../static/images/3.png" alt="">
+          <h3>GOSHAWK Verge Gaming Desktop PC</h3>
+          <div class="price">₹80,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-4">
+          <img src="../static/images/4.png" alt="">
+          <h3>Electrobot Gaming Tower PC</h3>
+          <div class="price">₹50,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-5">
+          <img src="../static/images/5.png" alt="">
+          <h3>ASUS ROG</h3>
+          <div class="price">₹1,50,000.00</div>
+       </div>
+ 
+       <div class="product" data-name="p-6">
+          <img src="../static/images/6.png" alt="">
+          <h3>CHIST Extreme Gaming PC</h3>
+          <div class="price">₹55,000.00</div>
+       </div>
+ 
+    </div>
+ 
+ </div>
+ 
+ <div class="products-preview">
+ 
+    <div class="preview" data-target="p-1">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/1.png" alt="">
+       <h3>Lian Li Lancool II Mesh RGB (Black)</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>AMD Ryzen 7 5800X3D ASUS B550 ProArt Creator 16 GB DDR4 3200 MHz Nvidia GeForce RTX 3060 12GB GDDR6 (Inno3D/Galax)</p>
+       <div class="price">₹1,00,000.00</div>
+       <div class="buttons">
+        <form action="{{url_for('device')}}" method="POST">
+          <input type="hidden" name="product" value="Lian Li Lancool II Mesh RGB (Black)-1,00,000">
+          <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+        </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-2">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/2.png" alt="">
+       <h3>Lian Li Lancool II Mesh RGB (White)</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>AMD Ryzen 5 5800X3D ASUS B550 ProArt Creator 16 GB DDR4 3200 MHz Nvidia GeForce RTX 3060 12GB GDDR6 (Inno3D/Galax)</p>
+       <div class="price">₹90,000.00</div>
+       <div class="buttons">
+         <form action="{{url_for('device')}}" method="POST">
+            <input type="hidden" name="product" value="Lian Li Lancool II Mesh RGB (White)-90000">
+            <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+          </form>
+          
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-3">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/3.png" alt="">
+       <h3>GOSHAWK Verge Gaming Desktop PC</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Intel Core i5 12th Generation/16GB DDR4 RAM/RTX 3050 GPU 8GB/240GB SSD Boot Drive/ 1TB Storage & Windows 11 Home Trial</p>
+       <div class="price">₹80,000.00</div>
+       <div class="buttons">
+         <form action={{url_for('device')}} method="POST">
+            <input type="hidden" name="product" value="GOSHAWK Verge Gaming Desktop PC-80000">
+            <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+          </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-4">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/4.png" alt="">
+       <h3>Electrobot Gaming Tower PC</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>AMD Ryzen 5 5600G/ 16GB (8x2 DDR4 Ram/ B550 Chipset Motherboard/ 1TB SSD , Windows 10 AMD Radeon Graphics)- Black</p>
+       <div class="price">₹50,000.00</div>
+         <div class="buttons">
+            <form action={{url_for('device')}} method="POST">
+               <input type="hidden" name="product" value="Electrobot Gaming Tower PC-50000">
+               <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+              </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-5">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/5.png" alt="">
+       <h3>ASUS ROG</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Intel Core i7 10700KF 10th Gen Gaming Dekstop (16GB RAM/1TB HDD + 512GB NVMe SSD/Windows 10/8GB NVIDIA GeForce RTX 2070 Super/with RGB Keyboard & Mouse/Star Black), G35CZ-IN008T.</p>
+       <div class="price">₹1,50,000.00</div>
+       <div class="buttons">
+         <form action="{{url_for('device')}}" method="POST">
+            <input type="hidden" name="product" value="ASUS ROG -1,50,000">
+            <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+          </form>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-6">
+       <i class="fas fa-times"></i>
+       <img src="../static/images/6.png" alt="">
+       <h3>CHIST Extreme Gaming PC</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Core i7 3770 Processor 4Core 8 Threats 256GB NVMe SSD 1TB HDD GT 730 4GB DDR5 Graphic Card Windows 10 Pro Wi-Fi Bluetooth Ready to Use (16GB RAM)</p>
+       <div class="price">₹55,000.00</div>
+       <div class="buttons">
+         <form action="{{url_for('device')}}" method="POST">
+            <input type="hidden" name="product" value="CHIST Extreme Gaming PC -55,000">
+            <input style="color: rgb(10, 10, 10); background-color: rgb(199, 222, 174); font-size: 20px;" class="buy btn btn-lg" type="submit" value="Buy Now">
+          </form>
+       </div>
+    </div>
+ 
+ </div>
+
+
+
+<div class="container">  
+   <div class="row">
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <img src="../static/images/logo.JPG" alt="logo" style="height:90px;" class="footer-logo mx-auto"><br>
+        <div class="social-btns mt-5">
+          <a href="https://www.facebook.com/"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/">
+            <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.whatsapp.com/">
+            <i class="fa fa-2x fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Become a member
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('signup')}}">Register</a>
+        </li>
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('login')}}">Log In</a>
+        </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-12">
+      <h6>
+        Support
+      </h6>
+      <ul class="footer-ul">
+        <li class="footer-links">
+          <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('custom')}}">Custom pc</a>
+        </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('device')}}">Devices</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('components')}}">Components</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('track')}}">Track order</a>
+      </li>
+      <li class="footer-links">
+        <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="{{url_for('contact')}}">Contact</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+   
+  
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+   class_name =  document.getElementsByClassName('cart')
+   
+  </script>
+
+</body>
+</html>
